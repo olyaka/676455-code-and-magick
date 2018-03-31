@@ -41,12 +41,12 @@ window.renderStatistics = function (ctx, names, times) {
     var currentX = CLOUD_X + BAR_GAP + (BAR_WIDTH + BAR_GAP) * i;
     var currentY = CLOUD_Y + CLOUD_HEIGHT - GAP;
     var currentBarHeigth = (BAR_HEIGHT * times[i]) / maxTime;
-    var randomBlue = Math.floor(Math.random() * (256 - 1)) + 1;
+    var randomOpacity = Math.random() * 0.9 + 0.1;
 
     ctx.fillStyle = '#000';
     ctx.fillText(names[i], currentX, currentY);
 
-    ctx.fillStyle = 'rgba(0, 0, ' + randomBlue + ', 1)';
+    ctx.fillStyle = 'rgba(0, 0, 255, ' + randomOpacity + ')';
 
     if (names[i] === 'Вы') {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
