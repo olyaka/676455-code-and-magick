@@ -71,6 +71,8 @@ var openPopup = function () {
 
 var closePopup = function () {
   setup.classList.add('hidden');
+  setup.style.top = 80 + 'px';
+  setup.style.left = 50 + '%';
   document.removeEventListener('keydown', onPopupEscPress);
 };
 
@@ -125,14 +127,13 @@ artifactsElement.addEventListener('dragover', function (evt) {
 });
 
 artifactsElement.addEventListener('drop', function (evt) {
-  if (!evt.target.hasChildNodes()) {
+  if (!evt.target.hasChildNodes() && evt.target.classList.contains('setup-artifacts-cell')) {
     evt.target.appendChild(draggedItem);
   }
   artifactsElement.style = '';
   evt.target.style.backgroundColor = '';
   evt.preventDefault();
 });
-
 
 artifactsElement.addEventListener('dragenter', function (evt) {
   evt.target.style.backgroundColor = 'yellow';
