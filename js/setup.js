@@ -42,6 +42,10 @@
 
   setupClose.addEventListener('click', function () {
     closePopup();
+    var errors = document.querySelectorAll('.error');
+    for (var i = 0; i < errors.length; i++) {
+      errors[i].remove();
+    }
   });
 
   setupClose.addEventListener('keydown', function (evt) {
