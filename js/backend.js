@@ -25,7 +25,7 @@ window.backend = (function () {
     },
 
     save: function (data, onLoad, onError) {
-      var URL = 'https://js.dump.academy/code-and-magick1';
+      var URL = 'https://js.dump.academy/code-and-magick';
 
       var xhr = new XMLHttpRequest();
       xhr.responseType = 'json';
