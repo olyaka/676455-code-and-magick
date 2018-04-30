@@ -6,9 +6,7 @@
   var setup = document.querySelector('.setup');
   var setupOpen = document.querySelector('.setup-open');
   var setupClose = setup.querySelector('.setup-close');
-  var wizardEyes = document.querySelector('.setup-wizard .wizard-eyes');
   var fireballWrap = document.querySelector('.setup-fireball-wrap');
-  var inputEyes = document.querySelector('input[name="eyes-color"]');
   var inputFireball = document.querySelector('input[name="fireball-color"]');
 
 
@@ -52,12 +50,6 @@
     if (evt.keyCode === ENTER_KEYCODE) {
       closePopup();
     }
-  });
-
-  wizardEyes.addEventListener('click', function () {
-    var currentColor = window.util.getRandomElement(window.wizards.EYE_COLORS);
-    wizardEyes.style.fill = currentColor;
-    inputEyes.value = currentColor;
   });
 
   fireballWrap.addEventListener('click', function () {
