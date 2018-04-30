@@ -11,8 +11,8 @@ window.wizards = (function () {
   var inputCoat = document.querySelector('input[name="coat-color"]');
 
   var wizard = {
-    onEyesChange: function (color) {},
-    onCoatChange: function (color) {}
+    onEyesChange: function () {},
+    onCoatChange: function () {}
   };
 
   wizardEyes.addEventListener('click', function () {
