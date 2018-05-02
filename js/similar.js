@@ -36,6 +36,12 @@
       }
       return rankDiff;
     }));
+
+    var similarWizards = document.querySelectorAll('.setup-similar-item');
+
+    for (var i = 0; i < similarWizards.length; i++) {
+      window.artifacts.show(wizards, similarWizards, i);
+    }
   };
 
   window.wizards.wizard.onEyesChange = function (color) {
